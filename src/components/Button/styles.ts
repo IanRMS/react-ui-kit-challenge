@@ -40,8 +40,8 @@ export const Container = styled.button<Props>`
   }
 
   &:active:not(:disabled) {
-    background-color: #ec407a;
-    border: ${(props) => (props.outlined ? `1px solid #ec407a` : "none")};
+    background-color: #d81b60;
+    border: ${(props) => (props.outlined ? `1px solid #d81b60` : "none")};
   }
 `;
 
