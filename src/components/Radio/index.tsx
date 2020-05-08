@@ -1,5 +1,7 @@
+// @ts-nocheck
 import React, { forwardRef } from "react";
-import { Label, Box, Mark } from "./styles";
+
+import { Label, Radio, Mark } from "./styles";
 
 export interface Props {
   label: string;
@@ -12,27 +14,19 @@ export interface Props {
   onChange?: () => void;
 }
 
-export interface ILabel {
+export interface PropsMark {
   color?: string;
   checked?: boolean;
-}
-
-export interface IBox {
-  ref: any;
-}
-
-export interface IMark {
-  checked?: boolean;
-  color?: string;
   readonly?: boolean;
 }
 
-export const CheckBox = forwardRef(
+const RadioWrapper = forwardRef(
   (
-    { label, name, value, color = "#e91e63", readOnly, ...props }: Props,
+    { label, name, value, color = "#e91e63", checked, ...props }: Props,
     ref
   ) => {
-    const { onChange, checked } = props;
+    const { readOnly, onChange } = props;
+
     return (
       <Label
         onClick={readOnly ? () => {} : onChange}
@@ -42,10 +36,11 @@ export const CheckBox = forwardRef(
       >
         {label}
 
-        <Box {...props} ref={ref} name={name} value={value} />
-
-        <Mark readonly={readOnly} checked={checked} color={color} />
+        <Radio {...props} ref={ref} name={name} value={value} />
+        <Mark color={color} checked={checked} readonly={readOnly} />
       </Label>
     );
   }
 );
+
+export { RadioWrapper as Radio };
