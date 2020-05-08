@@ -11,6 +11,8 @@ export interface Props {
   disabled?: boolean;
   onLoading?: boolean;
   fullSize?: boolean;
+  onClick?: () => void;
+  type?: string;
 }
 
 export const Button: React.FC<Props> = ({
@@ -23,6 +25,7 @@ export const Button: React.FC<Props> = ({
   onLoading = false,
   fullSize = false,
   loadingLabel = "Loading...",
+  type = "button",
 }) => {
   return (
     <Container
@@ -34,6 +37,7 @@ export const Button: React.FC<Props> = ({
       fullSize={fullSize}
       loadingLabel={loadingLabel}
       onLoading={false}
+      type="button"
     >
       {!onLoading ? (
         children

@@ -6,7 +6,7 @@ import { ButtonContainer } from "../src/components/Button/styles";
 storiesOf("Button", module)
   .add("Default", () => <Button>button</Button>)
   .add("Outlined", () => (
-    <Button outlined={true} outlinedColor="#e91e63">
+    <Button type="submit" outlined={true} outlinedColor="#e91e63">
       button
     </Button>
   ))
@@ -18,12 +18,15 @@ storiesOf("Button", module)
   ))
   .add("FullSize", () => (
     <ButtonContainer>
-      <Button fullSize={true}>button</Button>);
+      <Button type="submit" fullSize={true}>
+        button
+      </Button>
+      );
     </ButtonContainer>
   ))
   .add("Loading", () => (
     <ButtonContainer>
-      <Button fullSize={true} onLoading={true}>
+      <Button type="submit" fullSize={true} onLoading={true}>
         button
       </Button>
     </ButtonContainer>

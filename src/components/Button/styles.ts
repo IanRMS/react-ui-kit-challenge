@@ -37,6 +37,7 @@ export const Container = styled.button<Props>`
       props.outlined ? "none" : darken(0.18, props.backgroundColor as string)};
     cursor: not-allowed;
     border: ${(props) => (props.outlined ? `1px solid #9e9e9e` : "none")};
+    color: ${(props) => (props.outlined ? "#9e9e9e" : props.color)};
   }
 
   &:active:not(:disabled) {
