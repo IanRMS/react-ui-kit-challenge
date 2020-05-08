@@ -12,7 +12,7 @@ export const Container = styled.button<Props>`
   box-shadow: ${(props) =>
     props.outlined ? "none" : `0px 0px 5px rgba(0, 0, 0, 0.4)`};
   border: ${(props) =>
-    props.outlined ? `1px solid ${props.outlinedColor}` : "none"};
+    props.outlined ? `2px solid ${props.outlinedColor}` : "none"};
   outline: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -36,7 +36,7 @@ export const Container = styled.button<Props>`
     background-color: ${(props) =>
       props.outlined ? "none" : darken(0.18, props.backgroundColor as string)};
     cursor: not-allowed;
-    border: ${(props) => (props.outlined ? `1px solid #9e9e9e` : "none")};
+    border: ${(props) => (props.outlined ? `2px solid #9e9e9e` : "none")};
     color: ${(props) => (props.outlined ? "#9e9e9e" : props.color)};
   }
 
