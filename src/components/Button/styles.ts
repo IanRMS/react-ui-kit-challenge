@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { lighten, darken, readableColor } from "polished";
+import { lighten, darken } from "polished";
 import { Props } from ".";
 
 export const Container = styled.button<Props>`
@@ -20,6 +20,7 @@ export const Container = styled.button<Props>`
   transition: 0.3s ease-in-out;
   width: ${(props) => (props.fullSize ? `100%` : "auto")};
   font-size: 16px;
+  margin: 10px 0px;
 
   &:hover:not(:disabled) {
     background-color: ${(props) =>
@@ -41,8 +42,15 @@ export const Container = styled.button<Props>`
   }
 
   &:active:not(:disabled) {
-    background-color: #d81b60;
-    border: ${(props) => (props.outlined ? `1px solid #d81b60` : "none")};
+    background-color: ${(props) =>
+      darken(
+        0.09,
+        (props.outlined ? props.outlinedColor : props.backgroundColor) as string
+      )};
+    border: ${(props) =>
+      props.outlined
+        ? `1px solid ${darken(0.09, props.outlinedColor as string)}`
+        : "none"};
   }
 `;
 

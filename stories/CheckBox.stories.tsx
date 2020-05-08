@@ -43,6 +43,7 @@ storiesOf("CheckBox", module)
         value="Checked"
         checked={false}
         readOnly
+        color="#e53935"
       />
       <CheckBox
         name="checkBox"
@@ -50,6 +51,7 @@ storiesOf("CheckBox", module)
         value="Checked"
         checked={true}
         readOnly
+        color="#e53935"
       />
     </>
   ));
