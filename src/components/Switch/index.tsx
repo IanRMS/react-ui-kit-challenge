@@ -1,7 +1,21 @@
 // @ts-nocheck
 import React, { forwardRef } from "react";
 
-import { CheckBoxWrapper, CheckBoxLabel, CheckBox } from "./styles";
+import {
+  CheckBoxWrapper,
+  CheckBoxLabel,
+  CheckBox,
+  Container,
+  Info,
+} from "./styles";
+
+export const SwitchContainer: React.FC = ({ children }) => {
+  return <Container>{children}</Container>;
+};
+
+export const SwitchInfo: React.FC = ({ children }) => {
+  return <Info>{children}</Info>;
+};
 
 export interface BoxProps {
   name: string;
@@ -9,21 +23,34 @@ export interface BoxProps {
   color?: string;
   defaultChecked?: boolean;
   checked?: boolean;
-  readonly?: boolean;
+  disabled?: boolean;
   onChange?: () => void;
 }
 
 export const Switch = forwardRef(
-  ({ name, value, color = "#e91e63", checked, ...props }: Props, ref) => {
-    const { readonly, onChange } = props;
+  (
+    {
+      name,
+      value,
+      color = "#e91e63",
+      checked,
+      disabled = false,
+      ...props
+    }: Props,
+    ref
+  ) => {
+    const { onChange } = props;
     return (
       <CheckBoxWrapper>
         <CheckBox
+          name={name}
           ref={ref}
           value={value}
           checked={checked}
           type="checkbox"
-          onChange={readonly ? () => {} : onChange}
+          onChange={disabled ? () => {} : onChange}
+          color={disabled ? "#e0e0e0" : color}
+          disabled={disabled}
         />
         <CheckBoxLabel htmlFor={name} />
       </CheckBoxWrapper>

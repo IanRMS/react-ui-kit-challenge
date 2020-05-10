@@ -1,16 +1,18 @@
 import styled from "styled-components";
+import { BoxProps } from ".";
 
 export const CheckBoxWrapper = styled.div`
   position: relative;
+  height: 30px;
 `;
 export const CheckBoxLabel = styled.label`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
+  left: 0px;
+  top: 0px;
+  width: 65px;
   height: 30px;
   border-radius: 15px;
-  background: #bebebe;
+  background: #9e9e9e;
   cursor: pointer;
   &::after {
     content: "";
@@ -21,25 +23,46 @@ export const CheckBoxLabel = styled.label`
     height: 22px;
     top: 4px;
     left: 4px;
-    background: #ffffff;
-    transition: 0.3s all ease-in-out;
+    background: #fafafa;
+    transition: 180ms;
   }
 `;
-export const CheckBox = styled.input`
+export const CheckBox = styled.input.attrs({
+  type: "checkbox",
+})<BoxProps>`
   opacity: 0;
-  border-radius: 50%;
-  width: 80px;
+  z-index: 1;
+  border-radius: 15px;
+  width: 65px;
   height: 30px;
+  position: relative;
+  cursor: ${(props) => (!props.disabled ? "pointer" : "not-allowed")};
+
   &:checked + ${CheckBoxLabel} {
-    background: #4fbe79;
+    background: ${(props) => props.color};
     &::after {
       content: "";
       display: block;
+      position: absolute;
       border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      right: 4px;
-      transition: 0.2s;
+      width: 22px;
+      height: 22px;
+      left: 38px;
+      top: 4px;
     }
   }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px;
+`;
+
+export const Info = styled.span`
+  font-family: "Roboto";
+  font-size: 15px;
 `;
