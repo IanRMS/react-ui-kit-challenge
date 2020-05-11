@@ -3,3 +3,4 @@ export { Divider } from "./components/Divider";
 export { CheckBox } from "./components/Checkbox";
 export { Radio } from "./components/Radio";
 export { Switch, SwitchContainer, SwitchInfo } from "./components/Switch";
+export { Input } from "./components/Input";

@@ -26,7 +26,7 @@ storiesOf("Radio Button", module)
       </form>
     );
   })
-  .add("Read Only", () => (
+  .add("Disabled", () => (
     <form>
       <Radio
         label="Checked Read Only"
