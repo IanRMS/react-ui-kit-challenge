@@ -7,6 +7,7 @@ export interface ContainerProps {
   borderColor: string;
   focus: boolean;
   name: string;
+  loading?: boolean;
 }
 
 export interface OptionsProps {
@@ -22,6 +23,7 @@ export interface SelectProps {
   name: string;
   value?: any;
   onChange: (object: object) => void;
+  loading?: boolean;
 }
 
 export interface NoOptionProps {
@@ -38,6 +40,7 @@ export const SelectDropdown = forwardRef(
       floatingLabel = false,
       placeholder,
       onChange,
+      loading,
     }: SelectProps,
     ref
   ) => {
@@ -61,23 +64,33 @@ export const SelectDropdown = forwardRef(
         </Container>
         {options.length ? (
           <Options focus={focus}>
-            options.map((item, i) => (
-            <div
-              key={i}
-              onClick={() => {
-                setFocus(!focus);
-                onChange(item);
-                select(item);
-              }}
-            >
-              <span>{item.label}</span>
-            </div>
-            ))
+            {options.map((item, i) => (
+              <div
+                key={i}
+                onClick={() => {
+                  setFocus(!focus);
+                  onChange(item);
+                  select(item);
+                }}
+              >
+                <span>{item.label}</span>
+              </div>
+            ))}
           </Options>
         ) : (
           <NoOption focus={focus}>
-            <div>
-              <span>No options available</span>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                padding: 12,
+                alignItems: "center",
+              }}
+            >
+              <span>
+                {loading ? "Loading options..." : "No options available"}
+              </span>
             </div>
           </NoOption>
         )}

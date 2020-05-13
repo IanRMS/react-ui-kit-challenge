@@ -36,12 +36,13 @@ storiesOf("Select", module)
       value: "",
     });
     const states: any = [
-      // { label: "Bahia", value: "BA" },
-      // { label: "Minas Gerais", value: "MG" },
-      // { label: "Rio Grande do Sul", value: "RS" },
-      // { label: "Paraná", value: "PR" },
-      // { label: "São Paulo", value: "SP" },
+      { label: "Bahia", value: "BA" },
+      { label: "Minas Gerais", value: "MG" },
+      { label: "Rio Grande do Sul", value: "RS" },
+      { label: "Paraná", value: "PR" },
+      { label: "São Paulo", value: "SP" },
     ];
+    const states2: any = [];
 
     function selectState(item: any) {
       setState(item);
@@ -62,7 +63,7 @@ storiesOf("Select", module)
           name="State"
           value={state.label}
           floatingLabel={true}
-          options={states}
+          options={states2}
           onChange={selectState}
           placeholder="Select a state"
         />
@@ -71,9 +72,10 @@ storiesOf("Select", module)
           name="State"
           value={state.label}
           floatingLabel={true}
-          options={states}
+          options={states2}
           onChange={selectState}
           placeholder="Select a state"
+          loading={true}
         />
       </div>
     );

@@ -58,7 +58,6 @@ export const NoOption = styled.div<NoOptionProps>`
   overflow: hidden;
 
   > div {
-    padding: 12px;
     > span {
       font-size: 15px;
       color: #fafafa;
@@ -106,6 +105,7 @@ export const Options = styled.div<OptionsProps>`
     height: 48px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &:hover {
       background-color: rgba(20, 20, 20, 0.4);
