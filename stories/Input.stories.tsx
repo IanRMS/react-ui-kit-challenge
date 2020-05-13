@@ -83,7 +83,7 @@ storiesOf("Input", module)
       </div>
     );
   })
-  .add("With Validation", () => {
+  .add("With Custom Validation", () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
