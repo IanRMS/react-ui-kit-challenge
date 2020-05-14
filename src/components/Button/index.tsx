@@ -26,6 +26,7 @@ export const Button: React.FC<Props> = ({
   fullSize = false,
   loadingLabel = "Loading...",
   type = "button",
+  ...props
 }) => {
   return (
     <Container
@@ -38,6 +39,7 @@ export const Button: React.FC<Props> = ({
       loadingLabel={loadingLabel}
       onLoading={false}
       type="button"
+      {...props}
     >
       {!onLoading ? (
         children

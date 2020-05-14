@@ -49,38 +49,42 @@ storiesOf("Input", module)
     const [value2, setValue2] = useState("");
     const [value3, setValue3] = useState("");
     return (
-      <div style={{ width: 320 }}>
-        <Input
-          name="Number"
-          placeholder="Type your name..."
-          value={value}
-          setValue={setValue}
-          textColor="#fafafa"
-          floatingLabel={true}
-          type="number"
-        />
-        <Input
-          name="E-mail"
-          placeholder="Example fulano@gmail.com"
-          value={value2}
-          setValue={setValue2}
-          textColor="#fafafa"
-          floatingLabel={true}
-          type="email"
-          icon={<FaEnvelope />}
-          color="#e53935"
-        />
-        <Input
-          name="Name"
-          placeholder="Type your name..."
-          value={value3}
-          setValue={setValue3}
-          textColor="#fafafa"
-          floatingLabel={true}
-          type="text"
-          color="#ab47bc"
-        />
-      </div>
+      <>
+        <div style={{ width: 150 }}>
+          <Input
+            name="Number"
+            placeholder="Type your name..."
+            value={value}
+            setValue={setValue}
+            textColor="#fafafa"
+            floatingLabel={true}
+            type="number"
+          />
+        </div>
+        <div style={{ width: 320 }}>
+          <Input
+            name="E-mail"
+            placeholder="Example fulano@gmail.com"
+            value={value2}
+            setValue={setValue2}
+            textColor="#fafafa"
+            floatingLabel={true}
+            type="email"
+            icon={<FaEnvelope />}
+            color="#e53935"
+          />
+          <Input
+            name="Name"
+            placeholder="Type your name..."
+            value={value3}
+            setValue={setValue3}
+            textColor="#fafafa"
+            floatingLabel={true}
+            type="text"
+            color="#ab47bc"
+          />
+        </div>
+      </>
     );
   })
   .add("With Custom Validation", () => {
