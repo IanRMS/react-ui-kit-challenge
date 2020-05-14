@@ -1,5 +1,9 @@
 export { Button } from "./components/Button";
-export { CheckBox } from "./components/Checkbox";
+export {
+  CheckBox,
+  CheckBoxContainer,
+  CheckBoxInfo,
+} from "./components/Checkbox";
 export { Divider } from "./components/Divider";
 export { Input } from "./components/Input";
 export { Radio } from "./components/Radio";

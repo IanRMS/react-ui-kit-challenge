@@ -42,7 +42,7 @@ storiesOf("CheckBox", module)
         label="Unchecked"
         value="Checked"
         checked={false}
-        readOnly
+        readonly
         color="#e53935"
       />
       <CheckBox
@@ -50,7 +50,7 @@ storiesOf("CheckBox", module)
         label="Unchecked"
         value="Checked"
         checked={true}
-        readOnly
+        readonly
         color="#e53935"
       />
     </>

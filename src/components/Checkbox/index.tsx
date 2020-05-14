@@ -1,16 +1,24 @@
 import React, { forwardRef } from "react";
-import { Label, Box, Mark } from "./styles";
+import { Label, Box, Mark, Container, Info } from "./styles";
 
 export interface Props {
-  label: string;
   name: string;
   value: any;
   color?: string;
   defaultChecked?: boolean;
   checked?: boolean;
-  readOnly?: boolean;
+  readonly?: boolean;
+  label?: string;
   onChange?: () => void;
 }
+
+export const CheckBoxContainer: React.FC = ({ children }) => {
+  return <Container>{children}</Container>;
+};
+
+export const CheckBoxInfo: React.FC = ({ children }) => {
+  return <Info>{children}</Info>;
+};
 
 export interface ILabel {
   color?: string;
@@ -19,6 +27,7 @@ export interface ILabel {
 
 export interface IBox {
   ref: any;
+  readonly?: boolean;
 }
 
 export interface IMark {
@@ -29,22 +38,28 @@ export interface IMark {
 
 export const CheckBox = forwardRef(
   (
-    { label, name, value, color = "#e91e63", readOnly, ...props }: Props,
+    { name, label, value, color = "#e91e63", readonly, ...props }: Props,
     ref
   ) => {
     const { onChange, checked } = props;
     return (
       <Label
-        onClick={readOnly ? () => {} : onChange}
+        onClick={readonly ? () => {} : onChange}
         htmlFor={name}
         color={color}
         checked={checked}
       >
-        {label}
+        <Box
+          {...props}
+          readonly={readonly}
+          ref={ref}
+          name={name}
+          value={value}
+        />
 
-        <Box {...props} ref={ref} name={name} value={value} />
+        {label && label}
 
-        <Mark readonly={readOnly} checked={checked} color={color} />
+        <Mark readonly={readonly} checked={checked} color={color} />
       </Label>
     );
   }

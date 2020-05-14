@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { ILabel, IBox, IMark } from ".";
 
+export const Container = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Info = styled.span`
+  font-size: 15px;
+  color: #fafafa;
+`;
+
 export const Label = styled.label<ILabel>`
   display: flex;
   align-items: center;
@@ -47,6 +60,7 @@ export const Mark = styled.span<IMark>`
   align-items: center;
 
   transition: 200ms ease-in-out;
+  cursor: ${(props) => (props.readonly ? "not-allowed" : "pointer")};
 
   &:after {
     content: "";
