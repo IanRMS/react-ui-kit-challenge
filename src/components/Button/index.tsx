@@ -13,6 +13,7 @@ export interface Props {
   fullSize?: boolean;
   onClick?: () => void;
   type?: string;
+  style?: React.CSSProperties;
 }
 
 export const Button: React.FC<Props> = ({

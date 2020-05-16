@@ -39,6 +39,7 @@ export const Input: React.FC<Props> = ({
   errorColor = "#FF5252",
   validation = null,
   errorMessage = "",
+  ...props
 }) => {
   return (
     <Label
@@ -57,6 +58,7 @@ export const Input: React.FC<Props> = ({
         placeholder={placeholder}
         onChange={(e) => setValue(e.target.value)}
         color={textColor}
+        {...props}
       />
       {icon && icon}
       {floatingLabel && <span>{name}</span>}

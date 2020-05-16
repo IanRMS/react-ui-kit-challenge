@@ -6,7 +6,7 @@ export const Container = styled.button<Props>`
   background-color: ${(props) =>
     props.outlined ? "transparent" : props.backgroundColor};
   color: ${(props) => (props.outlined ? props.outlinedColor : props.color)};
-  padding: 0px 42px;
+  padding: 0px 38px;
   height: 48px;
   border-radius: 4px;
   box-shadow: ${(props) =>

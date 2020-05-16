@@ -1,14 +1,13 @@
 import React from "react";
-import { FullScreen, Container } from "./styles";
+import { FullScreen, Container, Message } from "./styles";
 
 interface Modalprops {
   open: boolean;
   setOpen: (newValue: boolean) => void;
-  title: string;
+  title?: string;
   message?: string;
-  type?: string;
   closeOutsideClick?: boolean;
-  icon?: React.ReactNode | React.Component;
+  style?: React.CSSProperties;
 }
 
 export interface FullScreenProps {
@@ -18,12 +17,11 @@ export interface FullScreenProps {
 export const Modal: React.FC<Modalprops> = ({
   open,
   setOpen,
-  title = "Modal Title",
+  title,
   children,
-  message = "",
-  type = "default",
+  message,
   closeOutsideClick = false,
-  icon,
+  style,
   ...props
 }) => {
   return (
@@ -32,9 +30,8 @@ export const Modal: React.FC<Modalprops> = ({
       onClick={() => (closeOutsideClick ? setOpen(false) : {})}
     >
       <Container {...props} title={title}>
-        {icon && icon}
-        <h2 style={{ marginTop: icon ? 10 : 0 }}>{title}</h2>
-        {message && message}
+        {title && <h2>{title}</h2>}
+        {message && <Message>{message}</Message>}
         {children}
       </Container>
     </FullScreen>

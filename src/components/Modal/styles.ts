@@ -28,11 +28,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 5px 20px;
+  padding: 15px 15px 5px 15px;
   min-width: 300px;
   background-color: #fafafa;
   border-radius: 6px;
-  color: #757575;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 
   animation: slideIn 250ms cubic-bezier(0.42, 0, 0.21, 1) 1;
@@ -55,4 +54,9 @@ export const Container = styled.div`
     color: #424242;
     margin-bottom: 20px;
   }
+`;
+
+export const Message = styled.span`
+  color: #757575;
+  margin-bottom: 15px;
 `;
