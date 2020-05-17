@@ -1,10 +1,12 @@
 {
   "name": "react-ui-kit-challenge",
   "version": "1.0.0",
+  "author": "Ian Ribeiro",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "storybook": "start-storybook -p 8000"
+    "storybook": "start-storybook -p 8000",
+    "buid": "tsc -p ."
   },
   "devDependencies": {
     "@storybook/addon-centered": "^5.3.18",
