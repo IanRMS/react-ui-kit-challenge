@@ -1,17 +1,20 @@
 {
-  "name": "react-ui-kit-challenge",
+  "name": "react-ian-form-kit",
   "version": "1.0.0",
   "author": "Ian Ribeiro",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8000",
-    "buid": "tsc -p ."
+    "build": "tsc -p .",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@storybook/addon-centered": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
     "@storybook/react": "^5.3.18",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@types/react": "^16.9.34",
     "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
