@@ -1,5 +1,10 @@
 // prettier-ignore
 {
+  "exclude": [
+    "node_modules",
+    "dist",
+    "./stories"
+  ],
   "compilerOptions": {
     "skipLibCheck": true,
     /* Basic Options */
