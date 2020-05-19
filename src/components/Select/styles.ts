@@ -9,7 +9,6 @@ export const Container = styled.div<ContainerProps>`
   outline: none;
   background: none;
   color: #9e9e9e;
-  padding-left: 12px;
   position: relative;
   display: flex;
   align-items: center;
@@ -30,6 +29,8 @@ export const Container = styled.div<ContainerProps>`
   > span {
     font-size: 16px;
     color: ${(props) => props.borderColor};
+    position: absolute;
+    left: 12px;
   }
 
   > svg {

@@ -6,7 +6,7 @@ export const Label = styled.label<LabelProps>`
   flex-direction: row;
   width: 100%;
   background: none;
-  margin: 55px 0px;
+  margin-bottom: 55px;
   border: none;
   position: relative;
 
@@ -38,6 +38,7 @@ export const Label = styled.label<LabelProps>`
       props.icon && props.iconPosition === "left" ? "46px" : "16px"};
     color: ${(props) => props.textColor};
     font-size: 16px;
+    outline: none;
     transition: 180ms ease-in-out;
 
     &::placeholder {

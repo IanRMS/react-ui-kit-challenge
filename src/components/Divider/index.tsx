@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Divider = styled.hr`
-  height: 2px;
+  height: 1.2px;
   width: 100%;
-  min-width: 280px;
   background-color: #9e9e9e;
-  margin: 20px 0px;
+  margin: 15px 0px;
 `;

@@ -39,7 +39,6 @@ export const Button: React.FC<Props> = ({
       fullSize={fullSize}
       loadingLabel={loadingLabel}
       onLoading={false}
-      type="button"
       {...props}
     >
       {!onLoading ? (
