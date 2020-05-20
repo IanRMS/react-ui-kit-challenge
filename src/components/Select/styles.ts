@@ -72,7 +72,7 @@ export const Options = styled.div<OptionsProps>`
   top: 60px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${(props) => props.backgroundColor};
   transition: all 180ms ease-in-out;
   max-height: ${(props) => (props.focus ? 200 : 0)}px;
   overflow-y: scroll;

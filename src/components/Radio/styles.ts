@@ -6,7 +6,7 @@ export const Label = styled.label<Props>`
   align-items: center;
   position: relative;
   padding-left: 38px;
-  height: 28px;
+  height: 30px;
   margin: 12px 0px;
   cursor: pointer;
   user-select: none;
@@ -44,8 +44,8 @@ export const Mark = styled.span<PropsMark>`
   &:after {
     content: "";
     position: relative;
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     border-radius: 20px;
     background-color: ${(props) =>
       props.checked

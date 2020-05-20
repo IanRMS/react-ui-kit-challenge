@@ -13,6 +13,7 @@ export interface ContainerProps {
 export interface OptionsProps {
   focus: boolean;
   onChange: (object: any) => void;
+  backgroundColor?: string;
 }
 
 export interface SelectProps {
@@ -24,6 +25,7 @@ export interface SelectProps {
   value?: any;
   onChange: (object: object) => void;
   loading?: boolean;
+  backgroundColor?: string;
 }
 
 export interface NoOptionProps {
@@ -41,6 +43,7 @@ export const SelectDropdown = forwardRef(
       placeholder,
       onChange,
       loading,
+      backgroundColor = "#212121",
     }: SelectProps,
     ref
   ) => {
@@ -63,7 +66,7 @@ export const SelectDropdown = forwardRef(
           <FaCaretDown />
         </Container>
         {options.length ? (
-          <Options focus={focus}>
+          <Options backgroundColor={backgroundColor} focus={focus}>
             {options.map((item, i) => (
               <div
                 key={i}

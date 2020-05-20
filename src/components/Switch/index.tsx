@@ -21,7 +21,7 @@ export const SwitchInfo: React.FC<InfoProps> = ({
   children,
   color = "#424242",
 }) => {
-  return <Info>{children}</Info>;
+  return <Info color={color}>{children}</Info>;
 };
 
 export interface BoxProps {
