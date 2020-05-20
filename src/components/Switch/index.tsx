@@ -13,7 +13,14 @@ export const SwitchContainer: React.FC = ({ children }) => {
   return <Container>{children}</Container>;
 };
 
-export const SwitchInfo: React.FC = ({ children }) => {
+export interface InfoProps {
+  color?: string;
+}
+
+export const SwitchInfo: React.FC<InfoProps> = ({
+  children,
+  color = "#424242",
+}) => {
   return <Info>{children}</Info>;
 };
 

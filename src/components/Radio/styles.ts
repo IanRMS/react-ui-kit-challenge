@@ -6,8 +6,8 @@ export const Label = styled.label<Props>`
   align-items: center;
   position: relative;
   padding-left: 38px;
-  height: 30px;
-  margin: 10px 0px;
+  height: 28px;
+  margin: 12px 0px;
   cursor: pointer;
   user-select: none;
   color: ${(props) => (props.checked ? "#fafafa" : "#9e9e9e")};
@@ -30,8 +30,8 @@ export const Mark = styled.span<PropsMark>`
   position: absolute;
   top: 0;
   left: 0;
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +44,8 @@ export const Mark = styled.span<PropsMark>`
   &:after {
     content: "";
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     border-radius: 20px;
     background-color: ${(props) =>
       props.checked

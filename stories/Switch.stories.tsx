@@ -29,7 +29,9 @@ storiesOf("Switch", module).add("Switch", () => {
             onChange={() => setSelect2(!select2)}
             color={"#e53935"}
           />
-          <SwitchInfo>{select2 ? "Turned On" : "Turned Off"}</SwitchInfo>
+          <SwitchInfo color="#424242">
+            {select2 ? "Turned On" : "Turned Off"}
+          </SwitchInfo>
         </SwitchContainer>
       </div>
       <div style={{ width: 250, backgroundColor: "#fafafa" }}>
@@ -41,7 +43,9 @@ storiesOf("Switch", module).add("Switch", () => {
             onChange={() => setSelect3(!select3)}
             color={"#7b1fa2"}
           />
-          <SwitchInfo>{select3 ? "Turned On" : "Turned Off"}</SwitchInfo>
+          <SwitchInfo color="#424242">
+            {select3 ? "Turned On" : "Turned Off"}
+          </SwitchInfo>
         </SwitchContainer>
       </div>
       <div style={{ width: 250, backgroundColor: "#fafafa" }}>
@@ -54,7 +58,9 @@ storiesOf("Switch", module).add("Switch", () => {
             color={"#7b1fa2"}
             disabled={true}
           />
-          <SwitchInfo>{select4 ? "Turned On" : "Turned Off"}</SwitchInfo>
+          <SwitchInfo color="#424242">
+            {select4 ? "Turned On" : "Turned Off"}
+          </SwitchInfo>
         </SwitchContainer>
       </div>
     </>

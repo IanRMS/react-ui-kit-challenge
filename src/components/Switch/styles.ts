@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BoxProps } from ".";
+import { BoxProps, InfoProps } from ".";
 
 export const CheckBoxWrapper = styled.div`
   position: relative;
@@ -54,7 +54,6 @@ export const CheckBox = styled.input.attrs({
 `;
 
 export const Container = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +61,8 @@ export const Container = styled.div`
   padding: 12px;
 `;
 
-export const Info = styled.span`
+export const Info = styled.span<InfoProps>`
   font-family: "Roboto";
   font-size: 15px;
+  color: ${(props) => props.color};
 `;

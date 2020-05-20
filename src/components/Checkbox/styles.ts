@@ -18,7 +18,7 @@ export const Label = styled.label<ILabel>`
   display: flex;
   align-items: center;
   position: relative;
-  padding-left: 38px;
+  padding-left: 40px;
   height: 30px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -50,10 +50,10 @@ export const Mark = styled.span<IMark>`
   position: absolute;
   top: 0;
   left: 0;
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
   background-color: ${(props) => (props.checked ? props.color : "transparent")};
-  border: ${(props) => (props.checked ? "none" : `2px solid ${props.color}`)};
+  border: ${(props) => `2px solid ${props.color}`};
   border-radius: 4px;
   display: flex;
   justify-content: center;

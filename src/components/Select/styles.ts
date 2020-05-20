@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
   cursor: pointer;
   transition: 180ms ease-in-out;
   user-select: none;
-  margin: 50px 0px;
+  margin-bottom: 30px;
 
   > p {
     margin: 0;
@@ -72,7 +72,7 @@ export const Options = styled.div<OptionsProps>`
   top: 60px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  background-color: #212c31;
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 180ms ease-in-out;
   max-height: ${(props) => (props.focus ? 200 : 0)}px;
   overflow-y: scroll;
@@ -99,10 +99,9 @@ export const Options = styled.div<OptionsProps>`
   }
 
   > div {
-    width: 100%;
-    padding: 12px;
-    cursor: pointer;
+    width: calc(100% - 16px);
     padding: 0px 8px;
+    cursor: pointer;
     height: 48px;
     display: flex;
     align-items: center;
