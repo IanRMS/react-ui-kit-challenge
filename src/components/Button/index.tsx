@@ -38,7 +38,7 @@ export const Button: React.FC<Props> = ({
       outlinedColor={outlinedColor}
       fullSize={fullSize}
       loadingLabel={loadingLabel}
-      onLoading={false}
+      onLoading={onLoading}
       {...props}
     >
       {!onLoading ? (
@@ -48,8 +48,6 @@ export const Button: React.FC<Props> = ({
           <div style={{ marginRight: 12 }}>
             <Spinner
               size={32}
-              spinnerColor={color}
-              spinnerWidth={32}
               visible={true}
               color={color}
               radius={32}
