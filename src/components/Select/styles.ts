@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ContainerProps, OptionsProps, NoOptionProps } from ".";
 
 export const Container = styled.div<ContainerProps>`
-  width: 100%;
+  width: calc(100% - 3px);
   height: 50px;
   border: ${(props) => `1.5px solid ${props.borderColor}`};
   border-radius: 6px;

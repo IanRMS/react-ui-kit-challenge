@@ -38,7 +38,6 @@ export const Button: React.FC<Props> = ({
       outlinedColor={outlinedColor}
       fullSize={fullSize}
       loadingLabel={loadingLabel}
-      onLoading={onLoading}
       {...props}
     >
       {!onLoading ? (

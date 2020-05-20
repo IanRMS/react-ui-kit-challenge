@@ -58,6 +58,8 @@ export const Input: React.FC<Props> = ({
         placeholder={placeholder}
         onChange={(e) => setValue(e.target.value)}
         color={textColor}
+        autoComplete="off"
+        autoCorrect="off"
         {...props}
       />
       {icon && icon}
