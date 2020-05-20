@@ -13,33 +13,33 @@ React Ui Kit Library - Form contents
 
 ## Components
 
--- [x] Button
--- [x] CheckBox
--- [x] Divider
--- [x] Input
--- [x] Modal
--- [x] Radio
--- [x] Select Dropdown
--- [x] Switch Toggle
--- [x] Textarea
+- [x] Button
+- [x] CheckBox
+- [x] Divider
+- [x] Input
+- [x] Modal
+- [x] Radio
+- [x] Select Dropdown
+- [x] Switch Toggle
+- [x] Textarea
 
 ## Techs
 
--- [x] React.Js
--- [x] Storybook
--- [x] Styled Components
--- [x] TypeScript
+- [x] React.Js
+- [x] Storybook
+- [x] Styled Components
+- [x] TypeScript
 
 ## What can be improved?
 
--- More styles
--- More components
+- More styles
+- More components
 
 ## Dependencies
 
--- [x] Polished
--- [x] react-icons
--- [x] react-spinner-material
+- [x] Polished
+- [x] react-icons
+- [x] react-spinner-material
 
 ## Using
 
