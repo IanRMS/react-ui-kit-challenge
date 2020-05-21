@@ -10,7 +10,7 @@ React Ui Kit Library - Form contents
 
 ## Author
 
-| [Ian Ribeiro](https://github.com/IanRMS)
+[Ian Ribeiro](https://github.com/IanRMS)
 
 ## Components
 
@@ -23,6 +23,10 @@ React Ui Kit Library - Form contents
 - [x] Select Dropdown
 - [x] Switch Toggle
 - [x] Textarea
+
+## Documentation
+
+- Click <a href="https://ianrms.github.io/react-ui-kit-challenge">here</a> to se a demonstration and documentation of each element included on the package
 
 ## Techs
 
