@@ -4,6 +4,7 @@ React Ui Kit Library - Form contents
 
 <p align="center">A Ui Kit Library for React.Js using a Storybook demonstration.</p>
 <p align="center">Published at <a href="https://www.npmjs.com/package/react-ian-form-kit">NPM</a>.</p>
+<p align="center">Examples and documentation at <a href="https://ianrms.github.io/react-ui-kit-challenge">GITHUB</a>.</p>
 
 <hr>
 

@@ -133,4 +133,55 @@ storiesOf("Input", module)
         />
       </div>
     );
+  })
+  .add("With Masks", () => {
+    const [phone, setPhone] = useState("");
+    const [cpf, setCpf] = useState("");
+
+    function phoneMask(value: any) {
+      if (value) {
+        return value
+          .replace(/\D/g, "")
+          .replace(/(\d{2})(\d)/, "($1) $2")
+          .replace(/(\d{4})(\d)/, "$1-$2")
+          .replace(/(\d{4})-(\d)(\d{4})/, "$1$2-$3")
+          .replace(/(-\d{4})\d+?$/, "$1");
+      }
+      return "";
+    }
+
+    function cpfMask(value: any) {
+      if (value) {
+        return value
+          .replace(/\D/g, "")
+          .replace(/(\d{3})(\d)/, "$1.$2")
+          .replace(/(\d{3})(\d)/, "$1.$2")
+          .replace(/(\d{3})(\d{1,2})/, "$1-$2")
+          .replace(/(-\d{2})\d+?$/, "$1");
+      }
+      return null;
+    }
+
+    return (
+      <div style={{ width: 380 }}>
+        <Input
+          name="Phone"
+          placeholder="With DDD"
+          value={phoneMask(phone)}
+          setValue={setPhone}
+          textColor="#fafafa"
+          floatingLabel={true}
+        />
+        <Input
+          name="CPF"
+          placeholder="Type your CPF"
+          value={cpfMask(cpf)}
+          setValue={setCpf}
+          textColor="#fafafa"
+          floatingLabel={true}
+          type="email"
+          color="#2196f3"
+        />
+      </div>
+    );
   });
