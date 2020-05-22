@@ -51,7 +51,7 @@ export const NoOption = styled.div<NoOptionProps>`
   top: 60px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  background-color: #212c31;
+  background-color: ${(props) => props.backgroundColor};
   transition: all 180ms ease-in-out;
   max-height: ${(props) => (props.focus ? 48 : 0)}px;
   user-select: none;

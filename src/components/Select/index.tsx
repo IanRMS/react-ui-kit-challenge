@@ -30,6 +30,7 @@ export interface SelectProps {
 
 export interface NoOptionProps {
   focus: boolean;
+  backgroundColor?: string;
 }
 
 export const SelectDropdown = forwardRef(
@@ -81,7 +82,7 @@ export const SelectDropdown = forwardRef(
             ))}
           </Options>
         ) : (
-          <NoOption focus={focus}>
+          <NoOption backgroundColor={backgroundColor} focus={focus}>
             <div
               style={{
                 display: "flex",

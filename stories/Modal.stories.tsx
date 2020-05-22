@@ -15,7 +15,7 @@ storiesOf("Modal", module)
           open={open}
           setOpen={setOpen}
           closeOutsideClick={true}
-          message="A mensagem do bagulho vai aqui"
+          message="Message goes here"
         >
           <Button
             backgroundColor="#ff8f00"
