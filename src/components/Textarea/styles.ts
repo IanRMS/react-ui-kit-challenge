@@ -26,7 +26,7 @@ export const TextArea = styled.textarea<Props>`
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
+  width: calc(100% - 32px);
   > span {
     position: absolute;
     top: -22px;
